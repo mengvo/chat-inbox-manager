@@ -1,7 +1,3 @@
-/**
-setContactOnlineStatus
- */
-
 export function getContactNames(contacts) {
     return contacts.map(({name}) => name);
 }
@@ -32,4 +28,13 @@ export function createContactSummaries(contacts) {
 
         return `${name} - ${online_str}`
     });
+}
+
+export function setContactOnlineStatus(contacts, contactId, online) {
+    const contact = contacts.find((c) => c.id == contactId);
+    if(contact) {
+        contact.online = online;
+    }
+
+    return contact;
 }

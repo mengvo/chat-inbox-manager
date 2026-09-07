@@ -1,6 +1,4 @@
 /*
-markMessageAsRead
-sendMessage
 countUnreadMessages
  */
 
@@ -18,4 +16,26 @@ export function findFirstUnreadMessage(messages) {
 
 export function formatMessages(messages) {
     return messages.map(({sender, text}) => `${sender}: ${text}`);
+}
+
+export function markMessageAsRead(messages, id) {
+    const msg = messages.find((m) => m.id === id);
+    if(msg) {
+        msg.read = true;
+    }
+
+    return msg;
+}
+
+export function sendMessage(messages, contactId, sender, text) {
+    const msg = {
+        id: messages.length + 1,
+        contactId,
+        sender,
+        text,
+        read: sender === "Mengzhen" ? true : false,
+    };
+
+    messages.push(msg);
+    return msg;
 }
