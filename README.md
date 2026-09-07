@@ -14,13 +14,3 @@ A small Node.js project I built to practice modern JavaScript fundamentals using
 - Understanding the difference between passing a function and calling it immediately
 
 The project models contacts and messages and includes functions for finding contacts, filtering messages, counting unread messages, updating statuses, sending messages, and generating inbox summaries.
-
-## Run locally
-
-```bash
-git clone https://github.com/mengvo/chat-inbox-manager.git
-cd chat-inbox-manager
-node app.js
-```
-
-No external packages are required.
