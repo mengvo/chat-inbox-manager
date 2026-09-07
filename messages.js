@@ -1,7 +1,3 @@
-/*
-countUnreadMessages
- */
-
 export function getMessagesForContact(messages, id) {
     return messages.filter((msg) => msg.id === id);
 }
@@ -38,4 +34,11 @@ export function sendMessage(messages, contactId, sender, text) {
 
     messages.push(msg);
     return msg;
+}
+
+export function countUnreadMessages(messages, contactId) {
+    const msg_arr = messages.filter((msg) => msg.contactId === contactId);
+    const unread_msgs = msg_arr.filter((msg) => !msg.read);
+
+    return unread_msgs.length;
 }

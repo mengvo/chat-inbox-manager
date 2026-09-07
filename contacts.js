@@ -18,15 +18,9 @@ export function findContactById(contacts, id) {
 
 export function createContactSummaries(contacts) {
     return contacts.map(({name, online}) => {
-        // let since value will change depending on online
-        let online_str = "" ;
-        if(online) {
-            online_str = "online";
-        } else {
-            online_str = "offline";
-        }
+        const status = online ? "online" : "offline";
 
-        return `${name} - ${online_str}`
+        return `${name} - ${status}`
     });
 }
 
