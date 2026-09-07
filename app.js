@@ -3,6 +3,7 @@ Defines handlers
 Calls the program’s functions and prints results
  */
 
+import {contacts, messsages } from "./data.js";
 import { countUnreadMessages } from "./messages.js";
 
 function createInboxSummaries(contacts, messages) {

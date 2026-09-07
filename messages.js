@@ -1,5 +1,5 @@
 export function getMessagesForContact(messages, id) {
-    return messages.filter((msg) => msg.id === id);
+    return messages.filter((msg) => msg.contactId === id);
 }
 
 export function getUnreadMessages(messages) {

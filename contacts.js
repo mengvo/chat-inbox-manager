@@ -25,7 +25,7 @@ export function createContactSummaries(contacts) {
 }
 
 export function setContactOnlineStatus(contacts, contactId, online) {
-    const contact = contacts.find((c) => c.id == contactId);
+    const contact = contacts.find((c) => c.id === contactId);
     if(contact) {
         contact.online = online;
     }
